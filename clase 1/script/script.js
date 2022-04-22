@@ -256,7 +256,7 @@ while (continua){
     }
         
 
-}*/
+
 
 //Realizar un programa que cuente la cantidad de divisores de un numero n
 
@@ -273,6 +273,64 @@ while (numero <=0){
     i = i +1
     console.log (numero, "tiene", cont, "divisores")
 }
+*/
 
 
+//CLASE 5 Objetos 
 
+/*let cliente1 = {
+    nombre: "Lucas",
+    apellido:"Quipildor",
+    edad: 39,
+    domicilio: "Gelly y obes 1234",
+    activo: true
+
+}
+
+console.log (cliente1)
+console.log (cliente1.apellido)
+console.log (cliente1["domicilio"])
+
+const cliente2= {
+    nombre: "Jesica",
+    apellido:"Alvarez",
+    edad: 39,
+    domicilio: "Gelly y obes 1234",
+    activo: true
+
+}
+
+
+cliente2.edad = 44
+console.log (cliente2.edad)
+console.log (cliente2)
+
+let i = 1
+for (let propiedad in cliente2){
+    if (propiedad == "apellido"|| propiedad=="nombre") 
+    console.log(i)
+    console.log (propiedad)
+    console.log (cliente2 [propiedad])
+    i++
+}*/
+
+
+function Cliente (nombreParam, apellidoParam, edadParam,activoParam){
+    this.nombre = nombreParam
+    this.apellido= apellidoParam
+    this.edad = edadParam
+    this.activo = activoParam
+
+}
+
+
+const cliente1 = new Cliente (//("Lucas","quipildor",45, true)
+prompt ("ingrese un nombre"),
+prompt ("ingrese un apellido"),
+prompt ("ingrese un edad"),
+prompt ("ingrese un estadolucas"),
+
+)
+console.log (cliente1)
+
+//DE ESTE MODO SE PUEDDE CARGAR DATOS A LOS PARAMETROS
