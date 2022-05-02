@@ -314,7 +314,7 @@ for (let propiedad in cliente2){
     i++
 }*/
 
-
+/*
 function Cliente (nombreParam, apellidoParam, edadParam,activoParam){
     this.nombre = nombreParam
     this.apellido= apellidoParam
@@ -334,3 +334,18 @@ prompt ("ingrese un estadolucas"),
 console.log (cliente1)
 
 //DE ESTE MODO SE PUEDDE CARGAR DATOS A LOS PARAMETROS
+
+//ARRAY
+let array = []
+
+let array2 = [true, 5, "hola",false,"chau"]
+
+console.log (array2)
+
+console.log (array2[2])*/
+
+
+var cadena= "una cadena"
+var doscadena= "otra cadena"
+var resultado= cadena + doscadena
+console.log (resultado)
