@@ -345,7 +345,5 @@ console.log (array2)
 console.log (array2[2])*/
 
 
-var cadena= "una cadena"
-var doscadena= "otra cadena"
-var resultado= cadena + doscadena
-console.log (resultado)
+console.log (document.getElementById("parrafo1"))
+console.log (document.getElementsByClassName("idDivParrafos"))

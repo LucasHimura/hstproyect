@@ -54,46 +54,155 @@ while (repetirCiclo) {
     //EN VEZ DE UTILIZAR VARIOS IF ME PARECIO MAS PRACTICO EL USO DE SWITCH
     switch (incidente) {
         case "cctv":
-            const dispCCTV =["cam1","cam2","cam3","cam4"]
-            console.log ("Por favor elija unos de los siguientes dispositivos"+ " "+dispCCTV)
-            dispCCTV.push (prompt ("Si su dispositivo no se encuentra en la lista puede agregarlo aqui, de lo contrario cancelar para continuar"))
-            console.log ("Por favor elija unos de los siguientes dispositivos"+ " "+dispCCTV)
+          const  dispCCTV = [
+                {
+                  id: 1,
+                  nombre: "Cam1",
+                  detalle: "Camara de Comedor",
+                  categoria: "CCTV",
+                  
+                },
+                  
+                
+                {
+                  id: 2,
+                  nombre: "Cam4",
+                  detalle: "Camara de Acceso",
+                  categoria: "CCTV",
+                 
+                },
+                {
+                  id: 3,
+                  nombre: "Cam2",
+                  detalle: "Camara de despacho",
+                  categoria: "CCTV",
+                  
+                },
+                {
+                  id: 4,
+                  nombre: "Cam3",
+                  detalle: "Camara de Oficinas",
+                  categoria: "CCTV",
+                 
+                },
+            ]
+       
 
-            do {
-                dispositivo = prompt("Que dispositivo presenta falla?").toLowerCase()
-                if (dispositivo != dispCCTV [0] && dispositivo != dispCCTV [1] && dispositivo != dispCCTV [2] && dispositivo !=dispCCTV [3]&& dispositivo !=dispCCTV [4])
+           
+
+           
+
+            const nombreCCTV= dispCCTV.map ((e) => e.nombre)
+                      
+                
+            
+            
+            console.log ("Por favor elija unos de los siguientes dispositivos"+ " "+nombreCCTV)
+            nombreCCTV.push ( prompt ("Si su dispositivo no se encuentra en la lista puede agregarlo aqui, de lo contrario cancelar para continuar"))
+            console.log ("Por favor elija unos de los siguientes dispositivos"+ " "+nombreCCTV)
+            
+            
+            do {              
+                            
+                dispositivo = prompt("Que dispositivo presenta falla?")
+                if (dispositivo != nombreCCTV [0])
                     alert("Su dispositivo no puede ser registrado para este sistema, no lo tenemos en nuestro registro")
-            } while (dispositivo != dispCCTV [0] && dispositivo != dispCCTV [1] && dispositivo != dispCCTV [2] && dispositivo !=dispCCTV [3]&& dispositivo !=dispCCTV [4])
+            } while(dispositivo != nombreCCTV [0])
 
 
 
             break
         case "alarma":
-            const dispALARM =["sen1","sen2","sen3","sen4"]
-            console.log ("Por favor elija unos de los siguientes dispositivos"+ " "+dispALARM)
-
-            dispALARM.push (prompt ("Si su dispositivo no se encuentra en la lista puede agregarlo aqui, de lo contrario cancelar para continuar"))
-            console.log ("Por favor elija unos de los siguientes dispositivos"+ " "+dispALARM)
-
-
-            do {
-                dispositivo = prompt("Que dispositivo presenta falla?").toLowerCase()
-                if (dispositivo != dispALARM [0] && dispositivo != dispALARM [1] && dispositivo != dispALARM [2] && dispositivo !=dispALARM [3]&& dispositivo !=dispALARM [4])
+            const dispAlarma = [       
+                {
+                  id: 5,
+                  nombre: "Sen1",
+                  detalle: "Sensor Oficina 1",
+                  categoria: "Intrusion",
+                 
+                  
+                },
+                {
+                  id: 6,
+                  nombre: "Sen2",
+                  detalle: "Sensor de Acceso",
+                  categoria: "Intrusion",
+                  
+                },
+                {
+                  id: 7,
+                  nombre: "Sen3",
+                  detalle: "Sensor de despacho",
+                  categoria: "Intrusion",
+                
+                },
+                {
+                  id: 8,
+                  nombre: "Sen4",
+                  detalle: "Sensor de Oficinas",
+                  categoria: "Intrusion",
+       
+              
+                },
+            ]
+            const nombreAlarma= dispAlarma.map ((e) => e.nombre)          
+                        
+            console.log ("Por favor elija unos de los siguientes dispositivos"+ " "+nombreAlarma)
+            nombreAlarma.push ( prompt ("Si su dispositivo no se encuentra en la lista puede agregarlo aqui, de lo contrario cancelar para continuar"))
+            console.log ("Por favor elija unos de los siguientes dispositivos"+ " "+nombreAlarma)
+           
+            do {              
+                            
+                dispositivo = prompt("Que dispositivo presenta falla?")
+                if (dispositivo != nombreAlarma [0])
                     alert("Su dispositivo no puede ser registrado para este sistema, no lo tenemos en nuestro registro")
-
-            } while (dispositivo != dispALARM [0] && dispositivo != dispALARM [1] && dispositivo != dispALARM [2] && dispositivo !=dispALARM [3]&& dispositivo !=dispALARM [4])
+            } while(dispositivo != nombreAlarma [0])
             break
         case "control de acceso":
-            const dispCA =["door1","door2","door3","door4"]
-            console.log ("Por favor elija unos de los siguientes dispositivos"+ " "+dispCA)
-            dispCA.push (prompt ("Si su dispositivo no se encuentra en la lista puede agregarlo aqui, de lo contrario cancelar para continuar"))
-            console.log ("Por favor elija unos de los siguientes dispositivos"+ " "+dispCA)
-            do {
-                dispositivo =prompt("Que dispositivo presenta falla?").toLowerCase()
-                if (dispositivo != dispCA [0] && dispositivo != dispCA [1] && dispositivo != dispCA [2] && dispositivo !=dispCA [3]&& dispositivo !=dispCA [4])
+            const dispCA = [
+                {
+                  id: 9,
+                  nombre: "Door1",
+                  detalle: "Acceso Oficina 1",
+                  categoria: "Acceso",
+                
+                },
+                {
+                  id: 10,
+                  nombre: "Door2",
+                  detalle: "Acceso porterias",
+                  categoria: "Acceso",
+                
+                },
+                {
+                  id: 11,
+                  nombre: "Door3",
+                  detalle: "Acceso de despacho",
+                  categoria: "Acceso",
+                
+                },
+                {
+                  id: 12,
+                  nombre: "Door4",
+                  detalle: "Acceso de Oficinas",
+                  categoria: "Acceso",
+                 
+                },
+              
+              
+            ]
+            const nombreCA= dispCA.map ((e) => e.nombre)          
+                        
+            console.log ("Por favor elija unos de los siguientes dispositivos"+ " "+nombreCA)
+            nombreCA.push ( prompt ("Si su dispositivo no se encuentra en la lista puede agregarlo aqui, de lo contrario cancelar para continuar"))
+            console.log ("Por favor elija unos de los siguientes dispositivos"+ " "+nombreCA)
+           
+            do {              
+                            
+                dispositivo = prompt("Que dispositivo presenta falla?")
+                if (dispositivo != nombreCA [0])
                     alert("Su dispositivo no puede ser registrado para este sistema, no lo tenemos en nuestro registro")
-
-            } while (dispositivo != dispCA [0] && dispositivo != dispCA [1] && dispositivo != dispCA [2] && dispositivo !=dispCA [3]&& dispositivo !=dispCA [4])
+            } while(dispositivo != nombreCA[0])
             break
 //aun no encontre la manera de que al hacer un PUSH se sume a las condiciones por eso agregue una condicion mas para que quede a modo de simulador pero si se agregan dos 
 //o mas dispositivos no los va a sumar a la condicion. sigo trabajando en ello. 
@@ -141,3 +250,8 @@ while (repetirCiclo) {
     }
 
 }
+
+
+
+
+

@@ -9,11 +9,12 @@ const selectOrdenar = document.querySelector("#ordenar");
 const selectFiltrar = document.querySelector("#categorias");
 const inputBuscar = document.querySelector("#buscar");
 
-const ordenar = { nombre: "Por nombre", precio: "Por precio" };
+const ordenar = { nombre: "Por nombre", categoria: "Por categoria" };
 const categorias = {
   todo: "Ver todos",
-  computacion: "Computación",
-  hogar: "Hogar",
+  CCTV: "CCTV",
+  Intrusion: "Intrusion",
+  Acceso: "Acceso"
 };
 
 //FUNCIONES
@@ -27,26 +28,24 @@ function crearSelect(objeto, etiqueta) {
 
 function mostrarProductos(array) {
   contenederPoductos.innerHTML = "";
-  array.forEach((producto) => {
+  array.forEach((sistemas) => {
     contenederPoductos.innerHTML += `
         <div class="col mb-5">
             <div class="card h-100">
-                <!-- Product image-->
-                <img class="card-img-top" src=${producto.img} alt="..." />
-                <!-- Product details-->
+               <!-- Product details-->
                 <div class="card-body p-4">
                     <div class="text-center">
                         <!-- Product name-->
-                        <h5 class="fw-bolder">${producto.nombre}</h5>
+                        <h5 class="fw-bolder">${sistemas.nombre}</h5>
                         <!-- Product price-->
-                        <h3>$${producto.precio}</h3>
-                        <p>${producto.detalle}</p>
+                        <h3>${sistemas.detalle}</h3>
+                        <p>${sistemas.categoria}</p>
                     </div>
                 </div>
                 <!-- Product actions-->
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                     <div class="text-center">
-                        <button onclick=agregarAlCarrito(${producto.id}) class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</button>
+                        <button onclick=agregarAlCarrito(${sistemas.id}) class="btn btn-outline-dark mt-auto" href="#">Cargar Incidente</button>
                     </div>
                 </div>
             </div>
@@ -55,24 +54,27 @@ function mostrarProductos(array) {
   });
 }
 
+
+function numeroTicket() {
+
+
+  ticket = Math.floor((Math.random() * 99999) + 1);
+
+ return (ticket)
+}
+
 function mostrarCarrito() {
   const carrito = capturarStorage();
   contenederCarrito.innerHTML = "";
-  carrito.forEach((producto) => {
+  carrito.forEach((sistemas) => {
     contenederCarrito.innerHTML += `
         <tr>
-            <th scope="row"><button onclick="restarCantidad(${
-              producto.id
-            })" class="btn"><</button>${
-      producto.cantidad
-    }<button onclick="incrementarCantidad(${
-      producto.id
-    })" class="btn">></button></th>
-            <td>${producto.nombre}</td>
-            <td>${producto.precio}</td>
-            <td>${producto.precio * producto.cantidad}</td>
+            <th scope="row"><button onclick="restarCantidad(${sistemas.id})" class="btn"><</button>${sistemas.cantidad}<button onclick="incrementarCantidad(${sistemas.id})" class="btn">></button></th>
+            <td>${sistemas.nombre}</td>
+            <td>${prioridades.nombre}</td>
+            <td>${numeroTicket()}</td>
             <td><button class="btn btn-danger" onclick="eliminarProductoCarrito(${
-              producto.id
+              sistemas.id
             })">x </button></td>
         </tr>
         `;
@@ -113,7 +115,7 @@ function mostrarTotalarrito() {
   //calculo el valor total
   const carrito = capturarStorage();
   const total = carrito.reduce(
-    (acc, elem) => acc + elem.cantidad * elem.precio,
+    (acc, elem) => acc + elem.cantidad,
     0
   );
   totalCarrito.innerHTML = total;
@@ -126,9 +128,9 @@ function agregarAlCarrito(id) {
     incrementarCantidad(id);
   } else {
     // sino esta lo bucso dentro de productos y lo agrego al array sumandole una propiedad cantidad
-    const productoAgregar = productos.find((prod) => prod.id === id);
+    const productoAgregar = sistemas.find((prod) => prod.id === id);
     carrito.push({ ...productoAgregar, cantidad: 1 });
-    alert(`Producto: ${productoAgregar.nombre} agregado al carrito`)
+    alert(`Dispositivo: ${productoAgregar.nombre} agregado a incidentes`)
     guardarStorage(carrito);
     mostrarCarrito();
   }
@@ -159,26 +161,26 @@ function restarCantidad(id) {
     guardarStorage(carrito);
     mostrarCarrito();
   } else {
-    carrito = confirm(`desea eliminar ${carrito[indice].nombre} del carrito de compras`) && eliminarProductoCarrito(id);
+    carrito = confirm(`desea eliminar ${carrito[indice].nombre} de incidentes`) && eliminarProductoCarrito(id);
   }
 }
 
 function eliminarCarrito() {
-  confirm("desea eliminar todos los productos del carrito de compra") &&
-    localStorage.removeItem("carrito");
+  confirm("desea eliminar todos los dispositivos de incidentes?") &&
+    localStorage.removeItem("incidentes");
   mostrarCarrito();
 }
 
 function confirmarCompra() {
   eliminarCarrito();
-  alert("Gracias por su compra");
+  alert("Soporte Tecnico resolvera el inconveniente lo mas rapido posible");
 }
 
 function filtrar() {
   const reultado =
     selectFiltrar.value !== "todo"
-      ? productos.filter((e) => e.categoria === selectFiltrar.value)
-      : productos;
+      ? sistemas.filter((e) => e.categoria === selectFiltrar.value)
+      : sistemas;
   return reultado;
 }
 
@@ -190,9 +192,12 @@ function buscar(array, valor) {
 }
 
 // LOGICA
-mostrarProductos(productos);
+mostrarProductos(sistemas);
+
+
 mostrarCarrito();
 cantidadCarrito();
+
 
 crearSelect(ordenar, selectOrdenar);
 crearSelect(categorias, selectFiltrar);
@@ -220,3 +225,12 @@ inputBuscar.oninput = (e) => {
   const prodFiltrados = buscar(filtrar(), e.target.value);
   mostrarProductos(prodFiltrados);
 };
+
+
+
+function sistemaPrioridad (){
+    
+  
+
+   
+  }
