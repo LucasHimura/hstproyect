@@ -45,6 +45,8 @@ formDispositivo.addEventListener('submit', (event) => {
  equipos.push(equipo)
  console.log(equipos)
  formDispositivo.reset()
+
+ 
 })
 
 botonIncidente.addEventListener('click', () => {
@@ -60,10 +62,19 @@ botonIncidente.addEventListener('click', () => {
               </div>
           </div>
       `
+
+  
+   
   })
 }) 
+let localStorage
 
+function guardarStorage() {
+ localStorage.setItem("Jsonequipos", JSON.stringify(equipos))
 
+}
+
+console.log (guardarStorage())
 
 
 
