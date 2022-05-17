@@ -39,4 +39,31 @@ body {
     height: 100vh;
  
 }
+
+.form-label{
+  color: white;
+}
   
+.mb-3 {
+  width: 600px;
+}
+
+.imgSistema{
+  width: 200px;
+  height: 200px;
+}
+
+div.card.h-100{
+  background-color:rgba(43, 43, 43, 0.45);
+}
+
+h5.card-title {
+  color: white;
+}
+p.card-text{
+  color: white;
+}
+
+h3 {
+     color: white;
+  }

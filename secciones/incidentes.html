@@ -24,69 +24,25 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../secciones/cargaInc.html">New Incident</a>
+                  </li>
           </div>
         </div>
       </nav>
     </header>
 
-    <div class="container">
-        <form id="formDispositivo">
-            <div class="mb-3">
-              <label for="idNombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="idNombre">
-            </div>
-            <div class="mb-3">
-                <label for="idDetalle" class="form-label">Detalle</label>
-                <input type="text" class="form-control" id="idDetalle">
-              </div>
-            <div class="mb-3">
-                <label for="idSistema" class="form-label">Sistema</label>
-                <input type="text" class="form-control" id="idSistema">
-            </div>
-              <div class="mb-3">
-                <label for="idPrioridad" class="form-label">Prioridad</label>
-                <input type="text" class="form-control" id="idPrioridad">
-              </div>
-            <button type="submit" class="btn btn-primary">Crear Incidente</button>
-          </form>
-    </div><br><br>
-
-    <button id="botonIncidente" class="btn btn-dark">Mostrar Incidente</button><br>
+    
+   
+    <button id="botonIncidente" onclick="mostrarEquipos()" class="btn btn-dark">Mostrar Incidente</button><br>
     <div id="divIncidente" class="row"></div>
+   
+    
 
 
 
 
-<!-- <div class="listas">
-  
-     <section>CCTV</section>
-<select id="formCctv"  aria-label="Default select example">
-  <option type="submit" class="lista">Elija un Dispositivo de CCTV</option>
-  
-  
-</select>
-<section>ALARMA</section>
-<select  id="formAlarma"  aria-label="Default select example">
-  <option type="submit" class="lista">Elija un Dispositivo de Alarma</option>
-  
-</select>
-<section>CONTROL DE ACCESO</section>
-<select id="formCa"  aria-label="Default select example">
-  <option type="submit" class="lista">Elija un Dispositivo de Control de Acceso</option>
-  
-</select>
 
-
-
-
-<section>PRIORIDAD</section>
-<button id="botonUrg" >URGENTE</button>
-<button id="botonAlta" >ALTA</button>
-<button id="botonMedia" >MEDIA</button>
-<button id="botonBaja" >BAJA</button>
-</div>
-
--->
      
   
      
@@ -95,4 +51,3 @@
 
 </body>
 </html>
-
