@@ -55,7 +55,7 @@ formDispositivo.addEventListener('submit', (event) => {
 
 //Recupera la info del Storage para ser mostrada en pagina Incidentes
 function equipoStorage() {
-  return JSON.parse(localStorage.getItem("nombre")) || []; // si el storage no existe retorno un array vacio
+  return JSON.parse(localStorage.getItem("nombre")) || []; 
  
 }
 
@@ -69,12 +69,12 @@ function mostrarEquipos() {
     <div class="card h-100">
         <div class="card-body p-4">
             <div class="text-center">
-            <h5 class="card-title">Incidente N° ${indice + 1 }</h5>
-                <h3 class="fw-bolder">${dispositivos.nombre}</h3>
-                <h3>${dispositivos.detalle}</h3>
-                <h3>${dispositivos.sistema}</h3>
-                <h3>${dispositivos.prioridad}</h3>    
-                <h3>${idUnico()}</h3>
+            <h5 class="card-title">Incidente:${indice+ 1000 }</h5>
+                <h5>Nombre:${dispositivos.nombre}</h3>
+                <h5>Detalle:${dispositivos.detalle}</h3>
+                <h5>Sistema:${dispositivos.sistema}</h3>
+                <h5>Prioridad:${dispositivos.prioridad}</h3>    
+                
             </div>
        
                
@@ -87,40 +87,7 @@ function mostrarEquipos() {
 
 
 
-/*
-<div class="col mb-5">
-<div class="card h-100">
-   <!-- Product details-->
-    <div class="card-body p-4">
-        <div class="text-center">
-            <!-- Product name-->
-            <h5 class="fw-bolder">${sistemas.nombre}</h5>
-            <!-- Product price-->
-            <h3>${sistemas.detalle}</h3>
-            <p>${sistemas.categoria}</p>
-        </div>
-    </div>
-    <!-- Product actions-->
-    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-        <div class="text-center">
-            <button onclick=agregarAlCarrito(${sistemas.id}) class="btn btn-outline-dark mt-auto" href="#">Cargar Incidente</button>
-        </div>
-    </div>
-</div>
-</div>
-;*/
 
 
 
-
-/*
-
-<div class="card" id="Ticket${indice}" style="width: 18rem;">
-              <div class="card-body">
-                  <h5 class="card-title">Incidente N° ${indice + 1}</h5>
-                  <p class="card-text">Nombre: ${dispositivos.nombre}</p>
-                  <p class="card-text">Detalle: ${dispositivos.detalle}</p>
-                  <p class="card-text">Sistema: ${dispositivos.sistema}</p>
-                  <p class="card-text">Prioridad: ${dispositivos.prioridad}</p>
-              </div>
-          </div>*/
+/*<h3>Nro. Ticket: ${idUnico()}</h3>*/
