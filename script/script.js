@@ -31,25 +31,15 @@ let numTicket = document.querySelector("#idTicket")
 
 formDispositivo.addEventListener('submit', (event) => {
   event.preventDefault()
-  
-  
   let nombre = document.querySelector("#idNombre").value
   let detalle = document.querySelector("#idDetalle").value
   let sistema = document.querySelector("#idSistema").value
   let prioridad = document.querySelector("#idPrioridad").value
-  
-
-
-
-  
-
-
   const equipo = new Dispositivo(nombre, detalle, sistema, prioridad)
   equipos.push(equipo)
   console.log(equipos)
   formDispositivo.reset()
   localStorage.setItem("nombre", JSON.stringify(equipos));
-
 })
 
 
@@ -74,7 +64,9 @@ function mostrarEquipos() {
                 <h5>Detalle:${dispositivos.detalle}</h3>
                 <h5>Sistema:${dispositivos.sistema}</h3>
                 <h5>Prioridad:${dispositivos.prioridad}</h3>    
-                
+                <div class="d-flex justify-content-around">
+                <button onclick="incidenteRealizado()" class="">Realizado</button>
+            </div>
             </div>
        
                
@@ -84,6 +76,14 @@ function mostrarEquipos() {
         `;
   });
 }
+
+function incidenteRealizado() {
+
+  localStorage.removeItem("nombre");
+  mostrarEquipos();
+}
+
+
 
 
 
