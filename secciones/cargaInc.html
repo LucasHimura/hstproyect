@@ -35,30 +35,31 @@
     <div class="container">
         <form id="formDispositivo">
             <div class="mb-3">
-              <label for="idNombre" class="form-label">Nombre</label>
+              <label for="idNombre" class="form-label"  placeholder="Ej:Nombre y posición, Cámara 1">Nombre</label>
               <input type="text" class="form-control" id="idNombre">
             </div>
             <div class="mb-3">
-                <label for="idDetalle" class="form-label">Detalle</label>
+                <label for="idDetalle" class="form-label" placeholder="Ej: Ubicación del dispositivo Sensor de Cocina...">Detalle</label>
                 <input type="text" class="form-control" id="idDetalle">
               </div>
             <div class="mb-3">
-                <label for="idSistema" class="form-label">Sistema</label>
+                <label for="idSistema" class="form-label" placeholder="Ej: Intrusión si es una alarma...">Sistema</label>
                 <input type="text" class="form-control" id="idSistema">
             </div>
               <div class="mb-3">
-                <label for="idPrioridad" class="form-label">Prioridad</label>
+                <label for="idPrioridad" class="form-label"  placeholder="Ej: Prioridad de atención...">Prioridad</label>
                 <input type="text" class="form-control" id="idPrioridad">
               </div>
               <div>
-                <input type="hidden" class="form-control" id="idTicket">
+                <label for="idObservacion" class="form-label"  placeholder="Ej: que atencion requiere...">Observacion</label>
+                <input type="text" class="form-control" id="idObservacion">
               </div>
             <button type="submit" id="crearIncidente" class="btn btn-primary">Crear Incidente</button>
           </form>
     </div><br><br>
    
-    <!--<button id="botonIncidente" class="btn btn-dark">Mostrar Incidente</button><br>
-    <div id="divIncidente" class="row"></div>-->
+    <button id="botonIncidente" onclick="mostrarEquipos()"class="btn btn-dark">Mostrar Incidente</button><br>
+    <div id="divIncidente" class="row"></div>
     
     
 

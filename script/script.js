@@ -53,19 +53,21 @@ function equipoStorage() {
 function mostrarEquipos() {
   const equipos = equipoStorage();
   divIncidente.innerHTML = "";
-  equipos.forEach((dispositivos,indice) => {
+  equipos.forEach((dispositivos, indice) => {
     divIncidente.innerHTML += `
     <div id= "color" class="col mb-5">
     <div class="card h-100">
         <div class="card-body p-4">
             <div class="text-center">
             <h5 class="card-title">Incidente:${indice+ 1000 }</h5>
-                <h5>Nombre:${dispositivos.nombre}</h3>
-                <h5>Detalle:${dispositivos.detalle}</h3>
-                <h5>Sistema:${dispositivos.sistema}</h3>
-                <h5>Prioridad:${dispositivos.prioridad}</h3>    
+                <h5>Nombre:${dispositivos.nombre}</h5>
+                <h5>Detalle:${dispositivos.detalle}</h5>
+                <h5>Sistema:${dispositivos.sistema}</h5>
+                <h5 id= "cambioColor" class= "changeColor" >Prioridad:${dispositivos.prioridad}</h5>    
                 <div class="d-flex justify-content-around">
                 <button onclick="incidenteRealizado()" class="">Realizado</button>
+                
+                 
             </div>
             </div>
        
@@ -77,6 +79,7 @@ function mostrarEquipos() {
   });
 }
 
+
 function incidenteRealizado() {
 
   localStorage.removeItem("nombre");
@@ -84,6 +87,21 @@ function incidenteRealizado() {
 }
 
 
+
+
+
+
+function changeColor(prioridad){
+  const cambioColor = document.getElementById("cambioColor")
+     
+     if (prioridad == 'urgente'){
+      cambioColor.classList.add("changeRed")
+
+     }else if (prioridad == 'media'){
+      cambioColor.classList.add("changeYellow")
+
+     }
+}
 
 
 
