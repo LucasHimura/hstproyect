@@ -9,13 +9,14 @@ function idUnico()  {
 
 
 class Dispositivo {
-  constructor(nombre, detalle, sistema, prioridad, numero) {
-    this.id = idUnico()
+  constructor(id, nombre, detalle, sistema, prioridad, numero, observacion) {
+    this.id = id
     this.nombre = nombre;
     this.detalle = detalle;
     this.sistema = sistema;
     this.prioridad = prioridad;
     this.numero = numero;
+    this.observacion= observacion;
     
    
   }
@@ -29,13 +30,15 @@ let divIncidente = document.querySelector('#divIncidente')
 let numTicket = document.querySelector("#idTicket")
 
 
+
 formDispositivo.addEventListener('submit', (event) => {
   event.preventDefault()
   let nombre = document.querySelector("#idNombre").value
   let detalle = document.querySelector("#idDetalle").value
   let sistema = document.querySelector("#idSistema").value
   let prioridad = document.querySelector("#idPrioridad").value
-  const equipo = new Dispositivo(nombre, detalle, sistema, prioridad)
+  let observacion = document.querySelector("#idObservacion").value
+  const equipo = new Dispositivo(idUnico(), nombre, detalle, sistema, prioridad,observacion)
   equipos.push(equipo)
   console.log(equipos)
   formDispositivo.reset()
@@ -59,13 +62,14 @@ function mostrarEquipos() {
     <div class="card h-100">
         <div class="card-body p-4">
             <div class="text-center">
-            <h5 class="card-title">Incidente:${indice+ 1000 }</h5>
+            <h5 class="card-title">Incidente:${dispositivos.id}</h5>
                 <h5>Nombre:${dispositivos.nombre}</h5>
                 <h5>Detalle:${dispositivos.detalle}</h5>
                 <h5>Sistema:${dispositivos.sistema}</h5>
-                <h5 id= "cambioColor" class= "changeColor" >Prioridad:${dispositivos.prioridad}</h5>    
+                <h5 id= "cambioColor" class= "changeColor" >Prioridad:${dispositivos.prioridad}</h5>
+                <p>Observacion de Falla:${dispositivos.observacion}</p>   
                 <div class="d-flex justify-content-around">
-                <button onclick="incidenteRealizado()" class="">Realizado</button>
+                <button onclick="eliminarIncidente(${dispositivos.id})" class="">Realizado</button>
                 
                  
             </div>
@@ -79,28 +83,19 @@ function mostrarEquipos() {
   });
 }
 
-
-function incidenteRealizado() {
+/*
+function incidenteRealizado(id) {
 
   localStorage.removeItem("nombre");
   mostrarEquipos();
 }
+*/
 
-
-
-
-
-
-function changeColor(prioridad){
-  const cambioColor = document.getElementById("cambioColor")
-     
-     if (prioridad == 'urgente'){
-      cambioColor.classList.add("changeRed")
-
-     }else if (prioridad == 'media'){
-      cambioColor.classList.add("changeYellow")
-
-     }
+function eliminarIncidente(id) {
+  let incidentes = equipoStorage()
+  let newIncidentes=incidentes.filter(e=>e.id !=id)
+  localStorage.setItem("nombre",JSON.stringify(newIncidentes)) /*** */
+  mostrarEquipos();
 }
 
 
