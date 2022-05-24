@@ -72,3 +72,9 @@ p {
     color: white;
  
 }
+
+.rojo {
+  margin: auto;
+  padding: auto;
+  background-color: red;
+}

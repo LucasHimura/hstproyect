@@ -1,55 +1,11 @@
 
-let opcion = document.getElementById("formCctv", "fomrAlarma", "formCa")
-formCctv.innerHTML += "<option> Camara 1 </option>"
-formCctv.innerHTML += "<option> Camara 2 </option>"
-formCctv.innerHTML += "<option> Camara 3 </option>"
-formCctv.innerHTML += "<option> Camara 4 </option>"
-
-formAlarma.innerHTML += "<option> Sensor 1  </option>"
-formAlarma.innerHTML += "<option> Sensor 2 </option>"
-formAlarma.innerHTML += "<option> Sensor 3 </option>"
-formAlarma.innerHTML += "<option> Sensor 4 </option>"
-
-formCa.innerHTML += "<option> Door 1 </option>"
-formCa.innerHTML += "<option> Door 2 </option>"
-formCa.innerHTML += "<option> Door 3 </option>"
-formCa.innerHTML += "<option> Door 4 </option>"
 
 
 
 
 
-const dispCCTV = [{
-    id: 1,
-    nombre: "Cam1",
-    detalle: "Camara de Comedor",
-    categoria: "CCTV",
 
-  },
-
-
-  {
-    id: 2,
-    nombre: "Cam4",
-    detalle: "Camara de Acceso",
-    categoria: "CCTV",
-
-  },
-  {
-    id: 3,
-    nombre: "Cam2",
-    detalle: "Camara de despacho",
-    categoria: "CCTV",
-
-  },
-  {
-    id: 4,
-    nombre: "Cam3",
-    detalle: "Camara de Oficinas",
-    categoria: "CCTV",
-
-  },
-]
+const dispCCTV = [ "Cam1","Cam4","Cam2","Cam3"]
 
 
 

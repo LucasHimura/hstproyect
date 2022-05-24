@@ -36,7 +36,15 @@
         <form id="formDispositivo">
             <div class="mb-3">
               <label for="idNombre" class="form-label"  >Nombre</label>
-              <input type="text" class="form-control" id="idNombre"placeholder="Ej:Nombre y posición, Cámara 1">
+              <select class="mb-3"id="idNombre" class="form-label" >
+                <option value="NINGUNA"></option>
+                <option >MZN - P1 - C003 - MOD.001</option>
+                <option >MZ - PB - C022 - Mod.002</option>
+                <option >MZN - P1 -C013 - Mod. 001</option>
+                <option >MZ - P2 - C006 - MOD.063</option>
+                <option >MZN - P1 - C009 - Mod.086</option>
+                <option >MZN - P1 - C006 - MOD.001</option>
+            </select>
             </div>
             <div class="mb-3">
                 <label for="idDetalle" class="form-label" >Detalle</label>
@@ -47,10 +55,17 @@
                 <input type="text" class="form-control" id="idSistema" placeholder="Ej: Intrusión si es una alarma...">
             </div>
               <div class="mb-3">
-                <label for="idPrioridad" class="form-label"  >Prioridad</label>
-                <input type="text" class="form-control" id="idPrioridad"placeholder="Ej: Prioridad de atención...">
+                <label  class="form-label" >Prioridad</label> <br>
+                <select class="mb-3"id="idPrioridad" class="form-label" >
+                  <option ></option>
+                  <option>URGENTE</option>
+                  <option >ALTA</option>
+                  <option >MEDIA</option>
+                  <option >BAJA</option>
+              </select>
+               
               </div>
-              <div>
+              <div class="mb-3">
                 <label for="idObservacion" class="form-label"  >Observacion</label>
                 <input type="text" class="form-control" id="idObservacion"placeholder="Ej: que atencion requiere...">
               </div>
@@ -62,7 +77,7 @@
     <div id="divIncidente" class="row"></div>
     
     
-
+   
 
 
 
@@ -98,7 +113,7 @@
 -->
      
   
-     
+ <script src="../script/script2.js"></script>    
  <script src="../script/script.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
