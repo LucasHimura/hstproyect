@@ -34,7 +34,7 @@ body {
   
     background: url(https://www.xtrafondos.com/wallpapers/resoluciones/19/gato-negro-en-la-oscuridad_3840x2160_3929.jpg) ;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     margin: 0;
     height: 100vh;
  
@@ -73,8 +73,23 @@ p {
  
 }
 
-.rojo {
+.URGENTE {
   margin: auto;
   padding: auto;
   background-color: red;
+}
+.ALTA {
+  margin: auto;
+  padding: auto;
+  background-color: rgb(255, 153, 0);
+}
+.MEDIA {
+  margin: auto;
+  padding: auto;
+  background-color:rgb(255, 251, 0) ;
+}
+.BAJA {
+  margin: auto;
+  padding: auto;
+  background-color:rgb(0, 132, 255) ;
 }
