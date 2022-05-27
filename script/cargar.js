@@ -4,7 +4,7 @@
   
   
   
-  //Creacion del objeto Dispositivo luego se guarda en un array llamado Equipos 
+  //Creacion del objeto Dispositivo
   class Dispositivo {
     constructor(id, nombre, detalle, sistema, prioridad, observacion) {
       this.id = id
@@ -44,7 +44,6 @@ let formDispositivo = document.querySelector('#formDispositivo')
     let observacion = document.querySelector("#idObservacion").value
     const equipo = new Dispositivo(idUnico(), nombre, detalle, sistema, prioridad, observacion)
     equipos.push(equipo)
-    //console.log(equipos)
     formDispositivo.reset()
     localStorage.setItem("ticket", JSON.stringify(equipos));
     Swal.fire({

@@ -46,6 +46,8 @@ function mostrarEquipos(array) {
 
   //ELimina el incidente individual una vez que se aprieta el boton realizado
   function eliminarIncidente(id) {
+    
+
     let incidentes = equipoStorage()
     let newIncidentes = incidentes.filter(e => e.id != id)
     localStorage.setItem("ticket", JSON.stringify(newIncidentes))
