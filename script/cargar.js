@@ -1,9 +1,3 @@
-
-
-  
-  
-  
-  
   //Creacion del objeto Dispositivo
   class Dispositivo {
     constructor(id, nombre, detalle, sistema, prioridad, observacion) {
@@ -46,6 +40,7 @@ let formDispositivo = document.querySelector('#formDispositivo')
     equipos.push(equipo)
     formDispositivo.reset()
     localStorage.setItem("ticket", JSON.stringify(equipos));
+    //alerta de creacion de incidente 
     Swal.fire({
         title: 'El ticket se ha creado con EXITO!',
         text: 'En la seccion incidente podras verlo',
@@ -55,3 +50,34 @@ let formDispositivo = document.querySelector('#formDispositivo')
 
   
   })
+
+
+  const select = document.getElementById("idNombre")
+
+
+//toma el listado de dispositivos desde api.json
+let baseDispositivo 
+async function crearSelect ()  {
+let response = await fetch (`../script/api.json`)
+let array = await response.json()
+baseDispositivo = array
+
+
+//crea el listado incluido en un nuevo array para que usuario pueda elegir los dispositvos 
+idNombre.innerHTML=""
+array.forEach((element) => {
+    
+    idNombre.innerHTML += `
+ 
+       
+<option value ="${element.nombre}" >${element.nombre}
+</option>
+
+   
+    
+    `
+}
+
+)}
+
+crearSelect () 

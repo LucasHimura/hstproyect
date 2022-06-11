@@ -1,63 +1,54 @@
- [
-    {
-        "nombre": "MZN - P1 - C003 - MOD.001"
-    },
-    {
-        "nombre": "MZN - PB - C022 - Mod.002"
-    },
-    {
-        "nombre": "MZN - P1 -C013 - Mod. 001"
-    },
-    {
-        "nombre": "MZN - P2 - C006 - MOD.063"
-    },
-    {
-        "nombre": "MZN - P1 - C009 - Mod.086"
-    },
-    {
-        "nombre": "MZN - P1 - C006 - MOD.001"
-    },
-
-
-
-
-    {
-        "nombre": "MZN - P1 - D003 - MOD.001"
-    },
-    {
-        "nombre": "MZ - PB - D022 - Mod.002"
-    },
-    {
-        "nombre": "MZN - P1 -D013 - Mod. 001"
-    },
-    {
-        "nombre": "MZ - P2 - D006 - MOD.063"
-    },
-    {
-        "nombre": "MZN - P1 - D009 - Mod.086"
-    },
-    {
-        "nombre": "MZN - P1 - D006 - MOD.001"
-    },
-
-
-    {
-        "nombre": "MZN - P1 - Sen003 - MOD.001"
-    },
-    {
-        "nombre": "MZ - PB - Sen022 - Mod.002"
-    },
-    {
-        "nombre": "MZN - P1 -Sen013 - Mod. 001"
-    },
-    {
-        "nombre": "MZ - P2 - Sen006 - MOD.063"
-    },
-    {
-        "nombre": "MZN - P1 - Sen009 - Mod.086"
-    },
-    {
-        "nombre": "MZN - P1 - Sen006 - MOD.001"
-    }
-
-]
+[
+         {
+            "id":1,
+            "nombre":"cam1"
+         },
+         {
+            "id":2,
+            "nombre":"cam2"
+         },
+         {
+            "id":3,
+            "nombre":"cam3"
+         },
+         {
+            "id":4,
+            "nombre":"cam4"
+         },
+ 
+   
+         {
+            "id":1,
+            "nombre":"sen1"
+         },
+         {
+            "id":2,
+            "nombre":"sen2"
+         },
+         {
+            "id":3,
+            "nombre":"sen3"
+         },
+         {
+            "id":4,
+            "nombre":"sen4"
+         },
+     
+         {
+            "id":1,
+            "nombre":"door1"
+         },
+         {
+            "id":2,
+            "nombre":"door2"
+         },
+         {
+            "id":3,
+            "nombre":"door3"
+         },
+         {
+            "id":4,
+            "nombre":"door4"
+         }
+      ]
+   

@@ -12,7 +12,7 @@ const botonBaja = document.querySelector("#baja")
 
 }
 
-//Muestra en tarjetas la informacion guardada en Storage
+//Muestra en tarjetas la informacion guardada en Storage, cada prioridad tiene un color identificatorio 
 function mostrarEquipos(array) {
   
   divIncidente.innerHTML = "";
@@ -56,13 +56,15 @@ function mostrarEquipos(array) {
   
   }
 
-
+//presenta todos los indicidentes sin discriminar por prioridad
 botonIncidente.addEventListener("click",()=>{
   let equipos= equipoStorage()
   mostrarEquipos(equipos)
   
 })
 
+
+//presenta los incidentes segun prioridad
 botonAlta.addEventListener("click",()=>{
   let equipos=equipoStorage()
   let alta =equipos.filter(equipo=>equipo.prioridad == "ALTA")

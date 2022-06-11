@@ -1,0 +1,21 @@
+[
+   {
+      "id":1,
+      "sistemas":"CCTV",
+      "img": "./imagenes/md.webp",
+      "detalle":"Sistema de Circuito Cerrado De Television, Prevencion de Perdidas, Seguridad  Patrimonial"
+     
+   },
+   {
+      "id":2,
+      "sistemas":"ALARMA",
+      "img": "./imagenes/alarma.jpg",
+      "detalle":"Sistema de Intrusion y Prevencion de Perdidas, Seguridad  Patrimonial"
+   },
+   {
+      "id":3,
+      "sistemas":"CONTROL DE ACCESO",
+      "detalle":"Sistema de Control de Acceso y Presentismo, Seguridad  Patrimonial",
+      "img": "./imagenes/molinete.jpg"
+   }
+]
