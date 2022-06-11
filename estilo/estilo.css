@@ -99,11 +99,10 @@ p {
     min-height: 70px;
     border-top: 1px solid rgba(50, 50, 50, 0.3);
     width: 100%;
-    position: relative;
-    clear: both;
+   
     margin-top: 300px;
-    padding-top: 0px;
-    overflow: visible;
+    padding-top: 300px;
+   
   }
   
   .container {
