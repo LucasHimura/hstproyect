@@ -1,6 +1,8 @@
 /* Googlefont Poppins CDN Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
+@media only screen and (min-width:320px) and (max-width:4096px){
+ 
 
 
 .logoHst {
@@ -100,8 +102,8 @@ p {
     border-top: 1px solid rgba(50, 50, 50, 0.3);
     width: 100%;
    
-    margin-top: 300px;
-    padding-top: 300px;
+    margin-top: 1000px;
+    padding-top: 1080px;
    
   }
   
@@ -112,3 +114,4 @@ p {
  
   
   
+}
